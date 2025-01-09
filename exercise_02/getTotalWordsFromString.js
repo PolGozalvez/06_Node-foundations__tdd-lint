@@ -4,3 +4,17 @@
  * output: number
  * validate input: throw TypeError with message "expected string but received <type-of-argument>" if input is not a string
  */
+
+/**
+ * Get the total number of words contained in one string
+ * @param {string} sentence 
+ * @returns number
+ */
+export function getTotalWordsFromString(sentence) {
+    if (typeof sentence !== "string") {
+        throw new TypeError(
+            `expected string but received ${typeof sentence}`
+        );
+    }
+    return sentence.split(" ").length;
+}
